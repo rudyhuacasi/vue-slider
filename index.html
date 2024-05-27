@@ -8,18 +8,32 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-   <div class="container">
-        <div class="items">
-            
+    
+   <div id="app">
+    <div class="container" @mouseover="stopImage" @mouseout="resumeImage">
+        <!-- slide grande  -->
+        <div class="items" >
+             <div v-for="(image, index) in images"  class="item" :class="{ active: index === currentIndex }" >
+                 <img :src="image.image" alt="Slide" >
+                 <div class="square"> 
+                     <h3>{{ image.title }}</h3>
+                     <p>{{ image.text }}</p>
+                 </div>
+             </div>
         </div>
-        
-        <div class="thumbs">
-           
-            <div class="prev"></div>
-            <div class="next"></div>
-        </div>
-   </div>
-
+        <!-- slide piccoli  -->
+         <div class="thumbs" @click="stopImage">
+             <div class="thumb" v-for="(image, index) in images"  @click="changeImage(index)" :class="{ active: index === currentIndex }">
+                 <img :src="image.image" alt="Thumbnail">
+             </div>
+             <div class="prev" @click="previousImage"></div>
+             <div class="next" @click="nextImage"></div>
+         </div>
+    </div>
+</div>
+   <!-- javascript (vue) -->
+   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+   <!-- javascript -->
    <script src="js/main.js"></script>
 </body>
 </html>
