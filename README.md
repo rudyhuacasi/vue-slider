@@ -7,3 +7,19 @@ Bonus:
 Consigli del giorno:
 - regola d'oro: riciclare ovunque possibile! Questo significa che per la parte di markup possiamo recuperare html e css dell'esercizio svolto qualche giorno fa: è già tutto pronto!
 - il riciclo spesso va a braccetto con le funzioni! Sapendole sfruttare bene, l'esercizio si riduce a poche righe :occhiolino:
+
+javascript
+
+// aggiungo un data
+
+        // aggiungo una function (previousImage) per avere l'anteriore immagine
+        
+        // aggiungo una function (nextImage) per avere la prossima immagine
+        
+        // aggiungo una function (changeImage) per fare il click su una thumb
+        
+        // aggiungo una function (starImage) per fare l'autoplay
+        
+        // aggiungo una function (stopImage) per fermare l'autoplay
+
+        // aggiungo una function (resumeImage) per continuare l'autoplay
